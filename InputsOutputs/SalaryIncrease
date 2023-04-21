@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class SalaryIncrease{
+  
+    public float calculateAdjustment(float salary, float adjustment){
+        adjustment = ((salary*adjustment)/100) + salary;
+        return adjustment;
+    }
+	
+    public static void main(String[] args) {
+
+        float salary, adjustment;
+
+        Scanner scanner = new Scanner(System.in);
+	
+        salary = scanner.nextFloat();
+        adjustment = scanner.nextFloat();
+
+        SalaryIncrease si = new SalaryIncrease();
+
+        System.out.printf("\nO novo salario eh: %.2f", si.calculateAdjustment(salary, adjustment)); 
+
+    }
+}
