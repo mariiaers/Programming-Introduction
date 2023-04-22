@@ -1,0 +1,30 @@
+/*Create a class that stores a person's data, name (String type) and year of birth (int type). 
+Assume the year of birth is never greater than 2023. 
+In the main method the input is the two attribute values, and the output is the person's name and calculated age (based on year only).*/
+
+import java.util.Scanner;
+
+public class DataOfAPerson{
+
+    public int CalculateAge(String name, int yearofbirth){
+        int age = 0;
+        age = 2023 - yearofbirth;
+        return age;
+    }
+
+	public static void main(String[] args) throws Exception {
+        
+        String name;
+        int yearofbirth;
+
+        Scanner scanner = new Scanner(System.in);
+		
+		  name = scanner.next();
+        yearofbirth = scanner.nextInt();
+		
+        DataOfAPerson person = new DataOfAPerson();
+		
+        System.out.println("\nName: " + name + "\nAge: " + person.CalculateAge(name, yearofbirth));
+
+    }
+}
